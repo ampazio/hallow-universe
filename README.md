@@ -4,7 +4,7 @@ Our project "The Hallow App Universe: Analyzing a Mediatized Religious World thr
 Our analysis included:
 
 1) a digital ethnography of the app
-2) co-occurence analysis of actors mentioned in Hallow's public communication, visualized through Gephi software and interpreted via the lens of visual network analysis
+2) co-occurence analysis of actors mentioned in a given unit of Hallow's public communication, visualized through Gephi software and interpreted via the lens of visual network analysis (Venturini and Munk 2021)
 3) thematic analysis and directed content analysis of a qualitative corpus
 4) text mining
 
@@ -14,4 +14,3 @@ The material uploaded here includes:
 3) Results of the co-occurence analysis in the form of nodes.csv and edges.csv files compatible with Gephi software
 4) Python scripts converting the initial .csv Excel output into the nodes and edges format
 
-5)
