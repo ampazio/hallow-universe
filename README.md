@@ -13,4 +13,5 @@ The material uploaded here includes:
 2) Direct results of the co-occurence analysis of the aformentioned entities in .csv format
 3) Results of the co-occurence analysis in the form of nodes.csv and edges.csv files compatible with Gephi software
 4) Python scripts converting the initial .csv Excel output into the nodes and edges format
+5) A Python script for text mining and topic modeling using LDA. It processes a corpus of .txt files, cleans and lemmatizes the text, extracts frequent keywords and n-grams, and generates visualizations such as interactive topic models and word clouds for verbs and adjectives.
 
