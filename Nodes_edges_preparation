@@ -1,7 +1,1 @@
-#test
-**First step: lexical analysis in MAXQDA**.
-
-Open MAXDiction > Dictionary. Add categories. One category = one code (no spaces between multi-word entity names). To each caterogy we add word variations that the dictionary should recognize, for example: if our category is JonathanRoumie, we include "Jonathan Roumie" as position.
-
-We then conduct a content analysis based on the dictionary and code our documents automatically with the results.
 
