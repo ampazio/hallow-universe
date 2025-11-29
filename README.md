@@ -9,10 +9,11 @@ Our analysis included:
 4) text mining
 
 The material uploaded here includes: 
-1) Python scripts used to apply the NER function to our qualitative data in order to extract a list of relevant entities
-2) Direct results of the co-occurence analysis of the aformentioned entities in .csv format
-3) Results of the co-occurence analysis in the form of nodes.csv and edges.csv files compatible with Gephi software
-4) Python scripts converting the initial .csv Excel output into the nodes and edges format
-5) A Python script for text mining and topic modeling using LDA. It processes a corpus of .txt files, cleans and lemmatizes the text, extracts frequent keywords and n-grams, and generates visualizations such as word clouds for verbs and adjectives.
-6) Ready-made language corpora composed of Instagram posts and website content, useful for identifying NERs
+1) Network visualizations in color (located in the DATA folder)
+2) Python script used to apply the NER function to our qualitative data in order to extract a list of relevant entities
+3) Direct results of the co-occurence analysis of the aformentioned entities in .csv format
+4) Results of the co-occurence analysis in the form of nodes.csv and edges.csv files compatible with Gephi software
+5) Python script converting the initial .csv Excel output into the nodes and edges format
+6) A Python script for text mining and topic modeling using LDA. It processes a corpus of .txt files, cleans and lemmatizes the text, extracts frequent keywords and n-grams, and generates visualizations such as word clouds for verbs and adjectives.
+7) Ready-made language corpora composed of Instagram posts and website content, useful for identifying NERs
 
