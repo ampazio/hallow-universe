@@ -81,6 +81,47 @@ print(f"Number of documents: {file_count}")
 print(f"Total number of tokens: {raw_token_count}")
 print(f"Number of alphabetic words: {raw_word_count}")
 
+# Categories and their word patterns
+semantic_groups = {
+    # Individualism / fitting / autonomy
+    "personal": [r"^personal"],
+    "individual": [r"^individual"],
+    "customization": [r"^custom", r"^tailor", r"^bespoke", r"^specific", r"^unique"],
+    "self_related": [r"^self", r"^own", r"^myself", r"^yourself", r"^oneself"],
+    "choice_autonomy": [r"^choose", r"^select", r"^prefer", r"^option", r"^freedom", r"^decision"],
+    "personalization": [r"^personaliz", r"^individualiz", r"^customiz"],
+
+    # Community / relational / togetherness
+    "community": [r"^community", r"^together", r"^collective", r"^shared", r"^communal", r"^unity", r"^team", r"^group", r"^we$", r"^us$"]
+}
+
+# Counting matches
+group_counts = {key: 0 for key in semantic_groups}
+
+for token in flat_tokens:
+    for key, patterns in semantic_groups.items():
+        if any(re.match(p, token) for p in patterns):
+            group_counts[key] += 1
+
+total_tokens = len(flat_tokens)
+
+print("\nNumber of occurrences of words related to individualism and community:")
+for key, count in group_counts.items():
+    percent = (count / total_tokens) * 100 if total_tokens else 0
+    print(f"{key}: {count} ({percent:.2f}%)")
+
+# Sum for individualistic vs. community categories
+individualism_keys = ["personal", "individual", "customization", "self_related", "choice_autonomy", "personalization"]
+community_keys = ["community"]
+
+individualism_total = sum(group_counts[k] for k in individualism_keys)
+community_total = sum(group_counts[k] for k in community_keys)
+
+print("\nTrend comparison:")
+print(f"Individualistic words: {individualism_total} ({(individualism_total/total_tokens)*100:.2f}%)")
+print(f"Community-related words: {community_total} ({(community_total/total_tokens)*100:.2f}%)")
+
+
 # Create dictionary and corpus
 dictionary = corpora.Dictionary(all_texts)
 corpus = [dictionary.doc2bow(text) for text in all_texts]
